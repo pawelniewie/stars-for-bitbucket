@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'}
+    %script{:src => 'https://bitbucket.org/atlassian-connect/all.js', 'data-options' => 'base:true;'}
+    / AUI
+    %link{:href => '//aui-cdn.atlassian.com/aui-adg/5.9.19/css/aui.min.css', :media => 'all', :rel => 'stylesheet'}/
+    %script{:src => '//aui-cdn.atlassian.com/aui-adg/5.9.19/js/aui.min.js'}
+
+  %body
+    #content{rel: 'main', style: 'background: #fff; padding: 5px;'}
+      - repos.each do |repo|
+        %div
+          %a{href: base_url + '/' + repo.repo_name, target: '_parent'}
+            = repo.repo_name
