@@ -1,5 +1,5 @@
 module PluginKeyService
 
-	PLUGIN_KEY = 'stars' + ("." + Rails.env unless Rails.env.production?)
+	PLUGIN_KEY = 'stars' + (Rails.env.production? ? '' :  '.' + Rails.env)
 
 end
