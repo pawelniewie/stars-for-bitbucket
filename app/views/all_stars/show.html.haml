@@ -7,9 +7,34 @@
     %link{:href => '//aui-cdn.atlassian.com/aui-adg/5.9.19/css/aui.min.css', :media => 'all', :rel => 'stylesheet'}/
     %script{:src => '//aui-cdn.atlassian.com/aui-adg/5.9.19/js/aui.min.js'}
 
+    :css
+      .repo {
+        margin-bottom: 15px;
+      }
+
+    :javascript
+      $(function() {
+        AP.require('request', function(request) {
+          $('.repo').each(function(idx, e) {
+            var $e = $(e);
+            var repoName = $e.data('repo-name');
+
+            request({
+              url: '/2.0/repositories/' + repoName,
+              success: function(repoDetails) {
+                $e.append('<div>' + repoDetails.description + '</div>');
+              },
+              error: function() {
+                console.log('error');
+              }
+            });
+          });
+        });
+      });
+
   %body
     #content{rel: 'main', style: 'background: #fff; padding: 5px;'}
       - repos.each do |repo|
-        %div
+        .repo{'data-repo-name' => repo.repo_name}
           %a{href: base_url + '/' + repo.repo_name, target: '_parent'}
             = repo.repo_name
