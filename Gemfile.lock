@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/MeisterLabs/atlassian-jwt-authentication.git
-  revision: fde44ccf4b69153346b2c0b97ab19633bcc34571
-  branch: master
+  remote: https://github.com/pawelniewie/atlassian-jwt-authentication.git
+  revision: da2957293f7c8733a06899372603a0f1b721469a
+  branch: feature/use-api-base-url-for-applications-that-support-it
   specs:
     atlassian-jwt-authentication (0.1.0)
       builder (>= 2.1.2, < 4.0.0)
