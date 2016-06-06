@@ -41,9 +41,6 @@ class LifecycleController < ApplicationController
 			raise 'Missing Authentication context'
 		end
 
-		endpoint = '/site/oauth2/access_token'
-		method = 'post'
-
 		# Expiry for the JWT token is 3 minutes from now
 		issued_at = Time.now.utc.to_i
 		expires_at = issued_at + 180
@@ -55,7 +52,7 @@ class LifecycleController < ApplicationController
 												 sub: current_jwt_auth.client_key
 										 }, current_jwt_auth.shared_secret)
 
-		response = HTTParty.send(method, "#{current_jwt_auth.base_url}#{endpoint}", {
+		response = HTTParty.post("#{current_jwt_auth.base_url}/site/oauth2/access_token", {
 				body: {grant_type: 'urn:bitbucket:oauth2:jwt'},
 				headers: {
 						'Content-Type' => 'application/x-www-form-urlencoded',
