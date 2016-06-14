@@ -32,12 +32,16 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+	gem 'newrelic_rpm'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'atlassian-jwt-authentication', 
 	git: 'https://github.com/pawelniewie/atlassian-jwt-authentication.git',
-	branch: 'feature/use-api-base-url-for-applications-that-support-it',
+	branch: 'master',
 	require: 'atlassian_jwt_authentication'
 
 gem 'haml'

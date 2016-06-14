@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/pawelniewie/atlassian-jwt-authentication.git
-  revision: da2957293f7c8733a06899372603a0f1b721469a
-  branch: feature/use-api-base-url-for-applications-that-support-it
+  revision: 7f43a37ae214058351250fca592bd2e51b2f57fe
+  branch: master
   specs:
     atlassian-jwt-authentication (0.1.0)
       builder (>= 2.1.2, < 4.0.0)
@@ -79,14 +79,17 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_portile2 (2.0.0)
+    mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
     multi_xml (0.5.5)
+    newrelic_rpm (3.15.2.317)
     nio4r (1.2.1)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
     pg (0.18.4)
+    pkg-config (1.1.7)
     puma (3.4.0)
     rack (2.0.0.rc1)
       json
@@ -118,7 +121,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.1.2)
+    rake (11.2.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -135,7 +138,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.4)
+    tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     websocket-driver (0.6.4)
@@ -151,6 +154,7 @@ DEPENDENCIES
   haml
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
+  newrelic_rpm
   pg (~> 0.18)
   puma (~> 3.0)
   rails (>= 5.0.0.rc1, < 5.1)
