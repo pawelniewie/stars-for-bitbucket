@@ -1,0 +1,9 @@
+
+{
+  "name": "stars-for-bitbucket",
+  "description": "",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::791615812720:role/stars-for-bitbucket_lambda_function",
+  "environment": {}
+}
