@@ -67,6 +67,7 @@ GEM
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jwt (1.5.6)
+    le (2.7.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -148,6 +149,7 @@ DEPENDENCIES
   byebug
   haml
   jbuilder (~> 2.0)
+  le
   listen (~> 3.0.5)
   newrelic_rpm
   pg (~> 0.18)

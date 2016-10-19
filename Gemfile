@@ -47,3 +47,6 @@ gem 'atlassian-jwt-authentication',
 	require: 'atlassian_jwt_authentication'
 
 gem 'haml'
+
+# LogEntry
+gem 'le'
