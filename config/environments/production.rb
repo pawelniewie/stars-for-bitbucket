@@ -64,7 +64,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  config.logger = Le.new(Rails.application.secrets.logentries_key,
+  config.logger = Le.new(Rails.application.secrets.logentries_token,
     debug: true,
     local: ENV["RAILS_LOG_TO_STDOUT"].present?,
     ssl: true,
