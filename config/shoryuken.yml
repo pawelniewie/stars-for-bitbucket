@@ -1,0 +1,11 @@
+aws:
+  access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %>
+  secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
+  region: "us-east-1"
+  receive_message:
+    wait_time_seconds: 10
+concurrency: 2
+delay: 10
+queues:
+  - 'stars'
+  - 'stars-mailer'
