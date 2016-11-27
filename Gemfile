@@ -1,4 +1,4 @@
-ruby '2.3.1'
+ruby '2.3.3'
 source 'https://rubygems.org' do
   # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
   gem 'rails', '>= 5.0.0.rc1', '< 5.1'
