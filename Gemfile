@@ -54,6 +54,6 @@ source 'https://rubygems.org' do
 
   gem 'rails-commons', git: 'https://github.com/pawelniewie/rails-commons.git', branch: 'master'
 
-  gem 'shoryuken'
+  gem 'delayed_job_active_record'
 end
 

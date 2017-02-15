@@ -29,7 +29,7 @@ module BitbucketRailsAddOn
 
     config.action_dispatch.default_headers.merge!({'X-Frame-Options' => 'ALLOWALL'})
 
-    config.active_job.queue_adapter = :shoryuken
+    config.active_job.queue_adapter = :delayed_job
     config.active_job.queue_name = Proc.new { 'stars' }
     config.active_job.queue_name_prefix = Rails.env
   end
