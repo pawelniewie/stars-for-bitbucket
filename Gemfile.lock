@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/pawelniewie/atlassian-jwt-authentication.git
-  revision: 83196ed72cedec355bef646fc4b9bd525bdee040
+  revision: f843563ea4a11198ba3a41daae4e4bce404c9120
   branch: master
   specs:
     atlassian-jwt-authentication (0.1.3)
@@ -109,7 +109,7 @@ GEM
     hitimes (1.2.4)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
-    i18n (0.7.0)
+    i18n (0.8.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
